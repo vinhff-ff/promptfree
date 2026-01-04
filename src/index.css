@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+:root {
+  --pinkGlobal: #ff0073ff;
+}
+
+#nprogress .bar {
+  background: var(--pinkGlobal) !important;
+}
+#nprogress .peg {
+  box-shadow: 
+    0 0 10px var(--pinkGlobal),
+    0 0 5px var(--pinkGlobal);
+}
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}

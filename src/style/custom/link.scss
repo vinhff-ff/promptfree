@@ -1,0 +1,31 @@
+.linkCustom {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+    color: var(--pinkGlobal);
+    font-weight: 500;
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 100%;
+        height: 1px;
+        border-radius: 999px;
+        background: linear-gradient(to right,
+                rgba(255, 0, 115, 1),
+                rgba(255, 0, 115, 0.6),
+                rgba(255, 0, 115, 0.15));
+
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.35s ease;
+    }
+
+    &:hover::after {
+        transform: scaleX(1);
+        
+    }
+}

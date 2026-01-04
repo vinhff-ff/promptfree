@@ -1,0 +1,57 @@
+.layout-main {
+  min-height: 100vh;
+  background-color: black;
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: auto;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: transparent;
+    transition: background 0.3s, backdrop-filter 0.3s, box-shadow 0.3s;
+    z-index: 10;
+    max-width: 1200px;
+    margin: auto;
+
+    &.scrolled {
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      height: auto;
+      width: 60px;
+
+      @media screen and (min-width: 1024px) {
+        height: auto;
+        width: 80px;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 5;
+    min-height: calc(100vh - 64px);
+    margin-top: 64px;
+    color: white;
+    padding: 0px 30px;
+
+    @media screen and (max-width: 1023px) {
+      padding: 0px;
+    }
+  }
+}
